@@ -1,12 +1,11 @@
 body {
-  background-color: #111;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  background-image: url('serpent.png');
+  background-size: cover;       /* Pour que l'image couvre tout le fond */
+  background-position: center;  /* Centrer l'image */
+  background-repeat: no-repeat; /* Pas de répétition */
+  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du scroll */
 }
+
 
 canvas {
   border: 2px solid #fff;
