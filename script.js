@@ -8,6 +8,7 @@ const tileCount = canvas.width / gridSize;
 let snake, direction, food, gameOver;
 let speed = 300; // vitesse initiale en ms (lente)
 let gameInterval;
+let lastLength = 1; // longueur du serpent à la dernière frame
 
 function initGame() {
   snake = [{ x: 10, y: 10 }];
@@ -15,6 +16,7 @@ function initGame() {
   food = { x: 5, y: 5 };
   gameOver = false;
   speed = 300;
+  lastLength = 1;
   restartBtn.style.display = "none";
 
   if (gameInterval) clearInterval(gameInterval);
@@ -23,12 +25,16 @@ function initGame() {
 
 function gameLoop() {
   draw();
+
   if (!gameOver) {
-    // On accélère toutes les 5 unités mangées
-    if ((snake.length - 1) % 5 === 0 && speed > 50) {
-      speed -= 10;
-      clearInterval(gameInterval);
-      gameInterval = setInterval(gameLoop, speed);
+    // Accélération douce à chaque nourriture mangée
+    if (snake.length > lastLength) {
+      lastLength = snake.length;
+      if (speed > 50) {
+        speed -= 5; // accélère un peu
+        clearInterval(gameInterval);
+        gameInterval = setInterval(gameLoop, speed);
+      }
     }
   }
 }
