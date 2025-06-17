@@ -1,15 +1,41 @@
 body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
   background-image: url('serpent.png');
-  background-size: cover;       /* Pour que l'image couvre tout le fond */
-  background-position: center;  /* Centrer l'image */
-  background-repeat: no-repeat; /* Pas de répétition */
-  background-attachment: fixed; /* Optionnel : pour que l'image reste fixe lors du scroll */
+  background-size: contain; /* pour que l’image soit totalement visible */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #fff; /* fond de secours blanc */
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 30px;
+  color: black;
+}
+
+p {
+  color: black;
+  font-family: arial, serif;
+  font-style: italic;
+  font-size: 18px;
+  margin: 5px 0 20px 0;
+  text-align: center;
+}
 
 canvas {
   border: 2px solid #fff;
-  background-color: #000;
+  background-color: transparent;
 }
 
 #restartBtn {
@@ -26,23 +52,3 @@ canvas {
 #restartBtn:hover {
   background-color: #ddd;
 }
-
-h1 {
-  font-size: 5rem;       /* très gros */
-  font-weight: 700;      /* gras */
-  width: 100%;           /* pleine largeur */
-  text-align: center;    /* centré */
-  font-family: Arial, sans-serif; /* ou autre police si tu veux */
-  margin-bottom: 10px;
-  color: black;
-}
-
-p {
-  color: black;
-  font-family: Garamond, serif;
-  font-style: italic;
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-size: 18px;
-}
-
