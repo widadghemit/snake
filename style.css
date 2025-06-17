@@ -26,8 +26,23 @@ canvas {
 #restartBtn:hover {
   background-color: #ddd;
 }
+
 h1 {
-  color: white;
-  margin-bottom: 20px;
-  font-family: Garamond, sans-serif;
+  font-size: 5rem;       /* très gros */
+  font-weight: 700;      /* gras */
+  width: 100%;           /* pleine largeur */
+  text-align: center;    /* centré */
+  font-family: Arial, sans-serif; /* ou autre police si tu veux */
+  margin-bottom: 10px;
+  color: black;
 }
+
+p {
+  color: balck;
+  font-family: Garamond, serif;
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
