@@ -27,3 +27,8 @@ canvas {
 #restartBtn:hover {
   background-color: #ddd;
 }
+h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-family: Garamond, sans-serif;
+}
